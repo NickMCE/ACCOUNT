@@ -1,9 +1,21 @@
 import sys
-print(sys.path)
-
 import streamlit as st
-import firebase_admin  # Corrected import statement
+
+# Check if the virtual environment is activated
+if not hasattr(sys, 'real_prefix') and sys.prefix != getattr(sys, 'base_prefix', sys.prefix):
+    st.error("Please activate your virtual environment before running the Streamlit app.")
+    st.stop()
+
+# Attempt to import firebase_admin
+try:
+    import firebase_admin
+except ImportError:
+    st.error("Failed to import 'firebase_admin'. Make sure it is installed in your virtual environment.")
+    st.stop()
+
+# Continue with the rest of the imports
 from firebase_admin import credentials, auth, db
+import pandas as pdfrom firebase_admin import credentials, auth, db
 import pandas as pd
 # Check if Firebase app is already initialized
 if not firebase_admin._apps:
