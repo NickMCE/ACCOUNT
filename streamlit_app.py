@@ -2,8 +2,8 @@ import sys
 print(sys.path)
 
 import streamlit as st
-import firebase_admin
-from firebase_admin import credentials, auth, db
+import firebase-admin
+from firebase-admin import credentials, auth, db
 import pandas as pd
 
 # Check if Firebase app is already initialized
