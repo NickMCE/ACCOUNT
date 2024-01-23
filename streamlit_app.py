@@ -15,7 +15,8 @@ except ImportError:
 
 # Continue with the rest of the imports
 from firebase_admin import credentials, auth, db
-import pandas as pd from firebase_admin import credentials, auth, db
+import pandas as pd 
+from firebase_admin import credentials, auth, db
 import pandas as pd
 # Check if Firebase app is already initialized
 if not firebase_admin._apps:
